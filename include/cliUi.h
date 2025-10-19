@@ -1,0 +1,6 @@
+#pragma once
+#include "WeatherService.h"
+
+void printUsage(const std::string& programName);
+void displayWeather(const WeatherData& weather);
+void displayError(const std::string& error);

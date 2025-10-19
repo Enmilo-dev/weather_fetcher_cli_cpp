@@ -1,0 +1,15 @@
+# Build folders
+cmake-build-debug/
+cmake-build-release/
+build/
+
+# CLion IDE
+.idea/
+
+# Compiled files
+*.exe
+*.o
+
+# Temporary files
+*.log
+cookies.txt
