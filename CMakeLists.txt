@@ -21,6 +21,8 @@ add_executable(WeatherCLI
         src/Utils.cpp
         src/WeatherService.cpp
         src/cliUi.cpp
+        src/Logger.cpp
+        src/ThreadPool.cpp
 )
 
 # Include directory for headers

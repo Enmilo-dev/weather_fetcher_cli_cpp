@@ -7,11 +7,11 @@
 
 using json = nlohmann::json;
 
-const std::string API_KEY = "e847a46a5c0ffbe9d565749c8c84a3a2";
+const std::string API_KEY = "Add your API"; //Get it from openweathermap.org
 
 WeatherData getWeather(const std::string& cityName) {
     WeatherData result;
-     std::string url = "https://api.openweathermap.org/data/2.5/weather?q=" +
+     const std::string url = "https://api.openweathermap.org/data/2.5/weather?q=" +
                       cityName + "&appid=" + API_KEY + "&units=metric";
 
     std::string jsonResponse = makeRequestUrl(url);

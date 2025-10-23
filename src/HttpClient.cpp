@@ -23,9 +23,7 @@ std::string makeRequestUrl(const std::string& url) {
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, WriteCallBack);
     curl_easy_setopt(handle, CURLOPT_WRITEDATA, &response);
 
-    CURLcode res = curl_easy_perform(handle);
-
-    if (res != CURLE_OK) {
+    if (const CURLcode res = curl_easy_perform(handle); res != CURLE_OK) {
         std::cerr << "CURL Error: " << curl_easy_strerror(res) << std::endl;
         curl_easy_cleanup(handle);
         return "";

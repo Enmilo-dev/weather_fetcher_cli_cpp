@@ -3,6 +3,15 @@
 //
 #include "cliUi.h"
 
+void wellcome() {
+    std::cout << "\n=== Weather CLI ===\n";
+    std::cout << "Enter city names (separated by commas or spaces):\n";
+    std::cout << "Example: Miami, London, Tokyo\n";
+    std::cout << "Or just: Miami\n\n";
+    std::cout << "Enter cities: ";
+}
+
+
 void printUsage(const std::string& programName) {
     std::cout << "\n=== Weather CLI ===\n";
     std::cout << "Usage: " << programName << " <city_name>\n\n";
