@@ -3,11 +3,6 @@
 //
 #include <ThreadPool.h>
 
-// void ThreadPool::wait() {
-//     std::unique_lock<std::mutex> lock(mtx);
-//     cv.wait(lock, [this]() { return tasks.empty(); });
-// }
-
 ThreadPool::ThreadPool(size_t T) {
     for (size_t i = 0; i < T; i++) {
         threads.emplace_back([this]() {
